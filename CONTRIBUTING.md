@@ -61,11 +61,19 @@ $ flutter pub get
 $ flutter run
 ```
 
-
-
+### Flutter Version Supporting
+```
+Flutter 3.13.8 • channel stable • https://github.com/flutter/flutter.git
+Tools • Dart 3.1.4 • DevTools 2.25.0
+```
 
 If you are contributing for any specific issue, make sure to reference the issue in your PR so that we can help with additional information.
 
 
 
 #### Still Facing issue, comment here: https://github.com/droidbg/Climater/discussions/7  , we will try to solve it .
+
+
+
+
+
