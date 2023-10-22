@@ -9,33 +9,33 @@ class GetStarted extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         decoration: kBackgroundDecoration,
-        constraints: BoxConstraints.expand(),
+        constraints: const BoxConstraints.expand(),
         child: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 100.0,
               ),
-              Expanded(
+              const Expanded(
                 flex: 2,
                 child: Image(
                   image: AssetImage('images/weather_icons/sun.png'),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50.0,
               ),
-              Expanded(
+              const Expanded(
                 child: Text(
                   'Discover the Weather in Your City',
                   textAlign: TextAlign.center,
                   style: kLargeTextStyle,
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: Text(
                   'Get to know your weather maps and radar precipitation forecast',
                   textAlign: TextAlign.center,

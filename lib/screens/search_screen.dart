@@ -15,18 +15,18 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('images/blur_background.jpg'),
             fit: BoxFit.cover,
           ),
         ),
-        constraints: BoxConstraints.expand(),
+        constraints: const BoxConstraints.expand(),
         child: SafeArea(
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Row(
@@ -37,7 +37,7 @@ class _SearchScreenState extends State<SearchScreen> {
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back_ios,
                           size: 50.0,
                         ),
@@ -49,7 +49,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
                 // Text(
@@ -57,11 +57,11 @@ class _SearchScreenState extends State<SearchScreen> {
                 //   textAlign: TextAlign.center,
                 //   style: kWeatherMainTextStyle,
                 // ),
-                Image(
+                const Image(
                   height: 180,
                   image: AssetImage('images/weather_icons/breeze.png'),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50.0,
                 ),
                 Text(
@@ -84,8 +84,8 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  padding: EdgeInsets.all(10.0),
+                  margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                  padding: const EdgeInsets.all(10.0),
                   child: CustomButton(
                     text: 'Get Weather',
                     textColor: Colors.red,
