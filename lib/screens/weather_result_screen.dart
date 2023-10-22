@@ -83,7 +83,7 @@ class _WeatherResultState extends State<WeatherResult> {
     }
   }
 
-  bool _onWillPop(bool isPopInvoked) {
+  Future<bool> _onWillPop() async {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -107,8 +107,11 @@ class _WeatherResultState extends State<WeatherResult> {
 
   @override
   Widget build(BuildContext context) {
-    return PopScope(
-      onPopInvoked: _onWillPop,
+    // TODO(droidbg): PopScope will be compatible in future flutter version .
+    /// return PopScope(
+    /// onPopInvoked: _onWillPop,
+    return WillPopScope(
+      onWillPop: _onWillPop,
       child: Scaffold(
         body: Container(
           color: Colors.black,
@@ -129,14 +132,14 @@ class _WeatherResultState extends State<WeatherResult> {
                       children: [
                         GestureDetector(
                           onTap: () async {
-                            final String typedName = await Navigator.push(
+                            final String? typedName = await Navigator.push(
                               context,
-                              MaterialPageRoute(
+                              MaterialPageRoute<String>(
                                 builder: (context) {
                                   return SearchScreen();
                                 },
                               ),
-                            ) as String;
+                            );
                             print('$typedName');
                             if (typedName != null) {
                               Map<dynamic, dynamic>? weatherData =
