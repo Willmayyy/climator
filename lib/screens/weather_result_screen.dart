@@ -107,12 +107,10 @@ class _WeatherResultState extends State<WeatherResult> {
 
   @override
   Widget build(BuildContext context) {
-
     // TODO(droidbg): PopScope will be compatible in future flutter version .
     /// return PopScope(
     /// onPopInvoked: _onWillPop,
     return WillPopScope(
-
       onWillPop: _onWillPop,
       child: Scaffold(
         body: Container(
