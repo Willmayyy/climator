@@ -22,7 +22,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
     //     toastLength: Toast.LENGTH_SHORT,
     //     gravity: ToastGravity.CENTER,
     //     timeInSecForIosWeb: 1);
-    final Map<dynamic, dynamic>? weatherData = await WeatherModel().getCityWeatherData('London');
+    final Map<dynamic, dynamic>? weatherData =
+        await WeatherModel().getCityWeatherData('London');
     // Fluttertoast.showToast(
     //     msg: "WeatherData Received",
     //     toastLength: Toast.LENGTH_SHORT,

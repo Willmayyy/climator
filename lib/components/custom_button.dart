@@ -31,7 +31,8 @@ class CustomButton extends StatelessWidget {
             border: Border.all(
               color: borderColor,
             ),
-            borderRadius: const BorderRadius.all(Radius.circular(borderRadius))),
+            borderRadius:
+                const BorderRadius.all(Radius.circular(borderRadius))),
         height: kBottomContainerHeight,
         width: 550,
         padding: const EdgeInsets.all(10.0),
