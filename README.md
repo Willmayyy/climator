@@ -31,6 +31,45 @@ This is weather app inspired by the beautiful designs made by [Valentine Chike](
 
 ### Checkout the [Finished App](https://play.google.com/store/apps/details?id=co.binnig.climator). 
 
+## Some Important Extract from [Contributor guide](CONTRIBUTING.md)
+
+### Setup Guide
+
+#### ✨ Before Starting, we would kindly request you to give a star to our repo ⭐️ .
+
+Climator is written in Flutter. In order to setup and run the project locally, you need to have an Android emulator, IOS Simulator or a real device.
+
+Running the project is as simple as:
+
+```
+$ git clone git@github.com:droidbg/Climater.git
+
+```
+### Add API_KEY in dev.env
+
+Sign In here : https://home.openweathermap.org/ 
+<br>
+After email verification you will get a mail with API key .
+Like this: 
+```
+Dear Customer!
+
+
+Thank you for subscribing to Free OpenWeatherMap!
+
+API key:
+- Your API key is ......
+- Within the next couple of hours, it will be activated and ready to use
+
+```
+Add this `API Key` in `dev.env` file.
+
+## Add pre commit
+
+```
+$ bash pre-commit
+```
+
 ## Resources Used:
 
 - Design by [Valentine Chike](https://dribbble.com/shots/16952894-Weather-App)
