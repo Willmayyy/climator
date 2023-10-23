@@ -16,6 +16,9 @@ Interested in participating in Hacktoberfest? We extend a warm invitation! You a
 Climator is now an open-source project, and we welcome contributions. Information on how to get started can be found in our [contributor guide](CONTRIBUTING.md). 
 <br>
 
+### Disclaimer 
+The codebase is 2 years old that is recently migrated to dart 3, so it requires quite a bit of refactoring and we are eagerly waiting for your contribution. 
+
 ## Our Goal
 
 The objective of making of this app is to learn about asynchronous programming in Dart. We'll look at how to carry out time consuming tasks such as getting device location and networking to get data from the internet.
@@ -27,6 +30,45 @@ This is weather app inspired by the beautiful designs made by [Valentine Chike](
 
 
 ### Checkout the [Finished App](https://play.google.com/store/apps/details?id=co.binnig.climator). 
+
+## Some Important Extract from [Contributor guide](CONTRIBUTING.md)
+
+### Setup Guide
+
+#### ✨ Before Starting, we would kindly request you to give a star to our repo ⭐️ .
+
+Climator is written in Flutter. In order to setup and run the project locally, you need to have an Android emulator, IOS Simulator or a real device.
+
+Running the project is as simple as:
+
+```
+$ git clone git@github.com:droidbg/Climater.git
+
+```
+### Add API_KEY in dev.env
+
+Sign In here : https://home.openweathermap.org/ 
+<br>
+After email verification you will get a mail with API key .
+Like this: 
+```
+Dear Customer!
+
+
+Thank you for subscribing to Free OpenWeatherMap!
+
+API key:
+- Your API key is ......
+- Within the next couple of hours, it will be activated and ready to use
+
+```
+Add this `API Key` in `dev.env` file.
+
+## Add pre commit
+
+```
+$ bash pre-commit
+```
 
 ## Resources Used:
 

@@ -105,4 +105,5 @@ local.properties
 pubspec.lock
 .talismanrc
 .metadata
-dev.env
+flutter_export_environment.sh
+```
