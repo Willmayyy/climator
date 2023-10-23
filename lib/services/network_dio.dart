@@ -27,20 +27,39 @@ class NetworksDio {
     try {
       final response = await dio.get(byCity(cityName));
       return decodeResponse(response);
+    } on DioError catch (e) {
+      if ( e.type == DioErrorType.connectionTimeout||
+          e.type == DioErrorType.receiveTimeout ||
+          e.type == DioErrorType.sendTimeout) {
+        throw Exception('Connection timed out. Please try again later.');
+      } else if (e.type == DioErrorType.badResponse) {
+        throw Exception('Server error. Please try again later.');
+      } else {
+        throw Exception('Unknown error occurred. Please try again later.');
+      }
     } catch (e) {
-      print("Error: $e");
-      return null;
+      throw Exception('Unknown error occurred. Please try again later.');
     }
   }
 
   Future<Map<String, dynamic>?> getDataByLatLong(
       double longitude, double latitude) async {
     try {
-      final response = await dio.get(byLatLong(latitude: latitude, longitude: longitude));
+      final response = await dio.get(
+          byLatLong(latitude: latitude, longitude: longitude));
       return decodeResponse(response);
+    } on DioError catch (e) {
+      if (e.type == DioErrorType.connectionTimeout ||
+          e.type == DioErrorType.receiveTimeout ||
+          e.type == DioErrorType.sendTimeout) {
+        throw Exception('Connection timed out. Please try again later.');
+      } else if (e.type == DioErrorType.badResponse) {
+        throw Exception('Server error. Please try again later.');
+      } else {
+        throw Exception('Unknown error occurred. Please try again later.');
+      }
     } catch (e) {
-      print("Error: $e");
-      return null;
+      throw Exception('Unknown error occurred. Please try again later.');
     }
   }
 
@@ -52,7 +71,9 @@ class NetworksDio {
     } else {
       print("In Decode Response Function");
       print(response.statusCode);
+      throw Exception('Server error. Please try again later.');
     }
     return resultData as Map<String, dynamic>;
   }
+
 }
