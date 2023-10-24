@@ -1,5 +1,5 @@
 name: Feature request
-description: Suggest a new idea for Flutter.
+description: Suggest a new idea for climator.
 body:
   - type: markdown
     attributes:
@@ -13,7 +13,7 @@ body:
       options:
         - label: I have searched the [existing issues](https://github.com/droidbg/climator/issues)
           required: true
-        - label: I have read the [guide to filing a bug](https://flutter.dev/docs/resources/bug-reports)
+        - label: I have read the [guide to filing a bug](https://climator.dev/docs/resources/bug-reports)
           required: true
   - type: textarea
     attributes:
@@ -26,22 +26,22 @@ body:
         concise description of what the problem is.
 
         Describe the alternative solutions you've considered. Is there a package
-        on pub.dev/flutter that already solves this?
+        on pub.dev/climator that already solves this?
     validations:
       required: true
   - type: textarea
     attributes:
       label: Proposal
       description: |
-        Briefly but precisely describe what you would like Flutter to be able to do.
+        Briefly but precisely describe what you would like climator to be able to do.
 
         Consider attaching something showing what you are imagining:
          * images
          * videos
          * code samples
 
-        Does this have to be provided by Flutter directly, or can it be provided
-        by a package on pub.dev/flutter? If so, maybe consider implementing and
+        Does this have to be provided by climator directly, or can it be provided
+        by a package on pub.dev/climator? If so, maybe consider implementing and
         publishing such a package rather than filing an issue.
     validations:
       required: true
