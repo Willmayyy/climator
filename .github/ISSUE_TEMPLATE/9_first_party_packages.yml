@@ -1,25 +1,25 @@
-name: Report a bug in one of Flutter's first-party packages
+name: Report a bug in one of climator's first-party packages
 description: |
-  You found a bug in one of Flutter's first-party packages.
+  You found a bug in one of climator's first-party packages.
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for using Flutter!
+        Thank you for using climator!
 
         If you are looking for support, please check out our documentation
         or consider asking a question on Stack Overflow:
 
-          - https://flutter.dev/
-          - https://api.flutter.dev/
-          - https://stackoverflow.com/questions/tagged/flutter?sort=frequent
+          - https://climator.dev/
+          - https://api.climator.dev/
+          - https://stackoverflow.com/questions/tagged/climator?sort=frequent
   - type: checkboxes
     attributes:
       label: Is there an existing issue for this?
       options:
-      - label: I have searched the [existing package issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Apackage)
+      - label: I have searched the [existing package issues](https://github.com/climator/climator/issues?q=is%3Aopen+is%3Aissue+label%3Apackage)
         required: true
-      - label: I have read the [guide to filing a bug](https://flutter.dev/docs/resources/bug-reports)
+      - label: I have read the [guide to filing a bug](https://climator.dev/docs/resources/bug-reports)
         required: true
   - type: dropdown
     id: packages
@@ -38,17 +38,17 @@ body:
         - espresso
         - extension_google_sign_in_as_googleapis_auth
         - file_selector
-        - flutter_adaptive_scaffold
-        - flutter_image
-        - flutter_lints
-        - flutter_markdown
-        - flutter_migrate
-        - flutter_plugin_android_lifecycle
-        - flutter_template_images
+        - climator_adaptive_scaffold
+        - climator_image
+        - climator_lints
+        - climator_markdown
+        - climator_migrate
+        - climator_plugin_android_lifecycle
+        - climator_template_images
         - go_router
         - go_router_builder
         - google_identity_services_web
-        - google_maps_flutter
+        - google_maps_climator
         - google_sign_in
         - image_picker
         - in_app_purchase
@@ -68,7 +68,7 @@ body:
         - url_launcher
         - video_player
         - web_benchmarks
-        - webview_flutter
+        - webview_climator
         - xdg_directories
     validations:
       required: true
@@ -92,7 +92,7 @@ body:
     attributes:
       label: Have you already upgraded your packages?
       description: |
-        Please check if the issue still persists or not after running `flutter pub upgrade`.
+        Please check if the issue still persists or not after running `climator pub upgrade`.
       options:
         - "Yes"
         - "No"
@@ -148,7 +148,7 @@ body:
         Please create a minimal reproducible sample that shows the problem
         and attach it below between the lines with the backticks.
 
-        To create it, use the `flutter create bug` command and update the `main.dart` file.
+        To create it, use the `climator create bug` command and update the `main.dart` file.
 
         Alternatively, you can create a public GitHub repository to share your sample.
 
@@ -187,9 +187,9 @@ body:
       label: Logs
       description: |
         Include the full logs of the commands you are running between the lines
-        with the backticks below. If you are running any `flutter` commands,
+        with the backticks below. If you are running any `climator` commands,
         please include the output of running them with `--verbose`; for example,
-        the output of running `flutter --verbose create foo`.
+        the output of running `climator --verbose create foo`.
 
         If the logs are too large to be uploaded to GitHub, you may upload
         them as a `txt` file or use online tools like https://pastebin.com to
@@ -207,9 +207,9 @@ body:
         </details>
   - type: textarea
     attributes:
-      label: Flutter Doctor output
+      label: climator Doctor output
       description: |
-        Please provide the full output of running `flutter doctor -v`
+        Please provide the full output of running `climator doctor -v`
       value: |
         <details><summary>Doctor output</summary>
 
