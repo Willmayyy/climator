@@ -87,17 +87,17 @@ class _WeatherResultState extends State<WeatherResult> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Are you sure?'),
-        content: Text('Do you want to exit an App'),
+        title:const Text('Are you sure?'),
+        content:const Text('Do you want to exit an App'),
         actions: <Widget>[
           ElevatedButton(
             onPressed: () => Navigator.of(context).pop(false),
-            child: Text('No'),
+            child:const Text('No'),
           ),
           ElevatedButton(
             onPressed: () => exit(0),
             /*Navigator.of(context).pop(true)*/
-            child: Text('Yes'),
+            child:const Text('Yes'),
           ),
         ],
       ),
@@ -117,9 +117,9 @@ class _WeatherResultState extends State<WeatherResult> {
           color: Colors.black,
           child: SafeArea(
             child: Container(
-              padding: EdgeInsets.all(20.0),
+              padding:const  EdgeInsets.all(20.0),
               decoration: kBackgroundDecoration,
-              constraints: BoxConstraints.expand(),
+              constraints: const BoxConstraints.expand(),
               child: Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -160,7 +160,7 @@ class _WeatherResultState extends State<WeatherResult> {
                               });
                             }
                           },
-                          child: Icon(
+                          child:const  Icon(
                             Icons.search,
                             size: 35,
                           ),
@@ -179,7 +179,7 @@ class _WeatherResultState extends State<WeatherResult> {
                                   '$cityName',
                                   style: kCityTextStyle,
                                 ),
-                                padding: EdgeInsets.only(left: 2, top: 2),
+                                padding:const  EdgeInsets.only(left: 2, top: 2),
                               ),
                             ],
                           ),
@@ -193,7 +193,7 @@ class _WeatherResultState extends State<WeatherResult> {
                               updateLocationDetails(weatherData);
                             });
                           },
-                          child: Icon(
+                          child:const  Icon(
                             Icons.refresh,
                             size: 35,
                           ),
@@ -201,8 +201,8 @@ class _WeatherResultState extends State<WeatherResult> {
                       ],
                     ),
                     Container(
-                      padding: EdgeInsets.all(10),
-                      margin: EdgeInsets.only(
+                      padding: const EdgeInsets.all(10),
+                      margin: const EdgeInsets.only(
                         top: 10,
                       ),
                       alignment: Alignment.topLeft,
@@ -211,14 +211,14 @@ class _WeatherResultState extends State<WeatherResult> {
                         style: kReportTitleTextStyle,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Image(
                       height: 180,
                       image: AssetImage('images/weather_icons/$imageName.png'),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 50.0,
                     ),
                     Text(
