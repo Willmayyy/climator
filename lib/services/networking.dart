@@ -6,11 +6,13 @@ import '../config/config.dart';
 import '../config/config_keys.dart';
 
 class Networks {
-  static const String urlDomain =
-      'https://api.openweathermap.org/data/2.5/weather?';
-
   String byCity(String city) {
-    return '${urlDomain}q=$city&appid=${getApiKey()}&units=metric';
+    return '${getBaseURL()}q=$city&appid=${getApiKey()}&units=metric';
+  }
+
+  String getBaseURL() {
+    final Config config = Config.manager;
+    return config.get(ConfigKeys.baseURL);
   }
 
   String getApiKey() {
@@ -19,7 +21,7 @@ class Networks {
   }
 
   String byLatLong({required double latitude, required double longitude}) {
-    return '${urlDomain}lat=$latitude&lon=$longitude&appid=${getApiKey()}&units=metric';
+    return '${getBaseURL()}lat=$latitude&lon=$longitude&appid=${getApiKey()}&units=metric';
   }
 
   Future<Map<dynamic, dynamic>?> getDataByCity(String cityName) async {
