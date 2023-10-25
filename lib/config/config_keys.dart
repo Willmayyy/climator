@@ -1,4 +1,4 @@
-enum ConfigKeys { apiKey, teamId }
+enum ConfigKeys { apiKey, teamId, baseURL }
 
 extension ConfigKeyValues on ConfigKeys {
   String getKeyValue() {
@@ -7,6 +7,8 @@ extension ConfigKeyValues on ConfigKeys {
         return 'API_KEY';
       case ConfigKeys.teamId:
         return 'TEAM_ID';
+      case ConfigKeys.baseURL:
+        return 'BASE_URL';
     }
   }
 }
