@@ -15,7 +15,7 @@ body:
       options:
       - label: I have searched the [existing issues](https://github.com/droidbg/climator/issues)
         required: true
-      - label: I have read the [guide to filing a bug](https://flutter.dev/docs/resources/bug-reports)
+      - label: I have read the [guide to filing a bug](https://climator.dev/docs/resources/bug-reports)
         required: true
   - type: textarea
     attributes:
@@ -46,7 +46,7 @@ body:
         Please create a minimal reproducible sample that shows the problem
         and attach it below between the lines with the backticks.
 
-        To create it, use the `flutter create bug` command and update the `main.dart` file.
+        To create it, use the `climator create bug` command and update the `main.dart` file.
 
         Alternatively, you can use https://dartpad.dev/ or create a public GitHub
         repository to share your sample.
@@ -83,9 +83,9 @@ body:
       label: Logs
       description: |
         Include the full logs of the commands you are running between the lines
-        with the backticks below. If you are running any `flutter` commands,
+        with the backticks below. If you are running any `climator` commands,
         please include the output of running them with `--verbose`; for example,
-        the output of running `flutter --verbose create foo`.
+        the output of running `climator --verbose create foo`.
 
         If the logs are too large to be uploaded to GitHub, you may upload
         them as a `txt` file or use online tools like https://pastebin.com to
@@ -103,9 +103,9 @@ body:
         </details>
   - type: textarea
     attributes:
-      label: Flutter Doctor output
+      label: climator Doctor output
       description: |
-        Please provide the full output of running `flutter doctor -v`
+        Please provide the full output of running `climator doctor -v`
       value: |
         <details><summary>Doctor output</summary>
 
