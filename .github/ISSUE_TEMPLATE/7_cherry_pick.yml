@@ -36,7 +36,7 @@ body:
       label: PR Link
       description: >-
         Link to an open PR that cherrypick's this into the target release branch.
-        The current branches can be found under release-caniddate-branch.version for [beta](https://github.com/flutter/flutter/blob/beta/bin/internal/release-candidate-branch.version) and [stable](https://github.com/flutter/flutter/blob/stable/bin/internal/release-candidate-branch.version)
+        The current branches can be found under release-caniddate-branch.version for [beta](https://github.com/droidbg/climator/blob/beta/bin/internal/release-candidate-branch.version) and [stable](https://github.com/droidbg/climator/blob/stable/bin/internal/release-candidate-branch.version)
     validations:
       required: true
   - type: textarea
@@ -44,22 +44,22 @@ body:
     attributes:
       label: Changelog Description
       description: >-
-        Explain this CP in one line that is accessible to most Flutter developers
-        See https://github.com/flutter/flutter/wiki/Hotfix-Documentation-Best-Practices for examples
+        Explain this CP in one line that is accessible to most climator developers
+        See https://github.com/droidbg/climator/wiki/Hotfix-Documentation-Best-Practices for examples
     validations:
       required: true
   - type: input
     id: impacted_users
     attributes:
       label: Impacted Users
-      description: Approximately who will hit this issue (ex. all Flutter devs, Windows developers, all end-customers, apps using X framework feature)?
+      description: Approximately who will hit this issue (ex. all climator devs, Windows developers, all end-customers, apps using X framework feature)?
     validations:
       required: true
   - type: textarea
     id: impact_description
     attributes:
       label: Impact Description
-      description: What is the impact (ex. visual jank on Samsung phones, app crash, cannot ship an iOS app)? Does it impact development (ex. flutter doctor crashes when Android Studio is installed), or the shipping production app (the app crashes on launch)
+      description: What is the impact (ex. visual jank on Samsung phones, app crash, cannot ship an iOS app)? Does it impact development (ex. climator doctor crashes when Android Studio is installed), or the shipping production app (the app crashes on launch)
     validations:
       required: true
   - type: textarea
